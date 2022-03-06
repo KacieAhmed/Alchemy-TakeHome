@@ -20,7 +20,10 @@ But how are these fees calculated?
 **The London Upgrade**
 
 
+
 * How transaction fees are calculated
+
+
 * 
 
 ### Step 1
