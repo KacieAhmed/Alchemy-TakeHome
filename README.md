@@ -19,7 +19,9 @@ Without transaction fees, vital consensus protcols like Proof of Work would also
 
 Before the London upgrade on August 5th, 2021, gas fees were calculated with the formula **gas fees = gas spent * gas price**. 
 
-**Gas spent** is the total amount of gas required for a transaction, and **gas price** is the totoal amount of ether you are willing to pay per gas unit of execution.
+**Gas spent** is the total amount of gas required for a transaction, and **gas price** is the total amount of ether you are willing to pay per gas unit of execution. 
+
+This formula is very simple. If your transaction cost 30,000 units of gas, and your gas price is 200 [Gwei](https://www.investopedia.com/terms/g/gwei-ethereum.asp#:~:text=Gwei%20is%20a%20denomination%20of,interference%20from%20a%20third%20party.), then by the Pre-London upgrade formula (**gas fees = gas spent * gas price**.), you will pay 30,000 * 200
 
 * How transaction fees are calculated
 
