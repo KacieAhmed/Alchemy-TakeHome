@@ -17,8 +17,8 @@ Without transaction fees, vital consensus protcols like Proof of Work would also
 
 ## The London Upgrade (EIP-1559)
 
-**Before London Upgrade**
--
+<u>**Before London Upgrade**</u>
+
 
 Before the London upgrade on August 5th, 2021, gas fees were calculated with the formula **gas fees = gas spent * gas price**. 
 
