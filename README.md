@@ -11,6 +11,8 @@ When learning blockchain development, you may have noticed that transactions mad
 
 The purpose of transaction fees on the Ethereum network is to enable security and decentralization. Without transaction fees, vital consensus protcols like Proof of Work would not work. 
 
+![](https://edge.app/wp-content/uploads/2020/09/ethereum-gas-1.png)
+
 **The London Upgrade**
 
 
