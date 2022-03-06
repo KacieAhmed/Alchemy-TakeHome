@@ -6,6 +6,7 @@ If you have questions at any point feel free to reach out in the [Alchemy Discor
 
 _______
 **Gas fees**
+
 When learning blockchain development, you may have noticed that transactions made on the Ethereum netowrk cost a fee. These fees are called *gas fees*, and they are a fundamental concept in web3 development. 
 
 
