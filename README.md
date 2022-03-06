@@ -23,4 +23,6 @@ But how are these fees calculated?
 * How transaction fees are calculated
 * 
 
+###Step 1
 
+###Step 2
