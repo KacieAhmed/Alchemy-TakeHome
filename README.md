@@ -4,4 +4,6 @@
 
 If you have questions at any point feel free to reach out in the [Alchemy Discord](https://discord.com/invite/mMGsVgd) 
 
+_______
+
 When learning blockchain development, you may have noticed that transactions made on the Ethereum netowrk cost a fee. 
