@@ -11,9 +11,7 @@ When learning blockchain development, you may have noticed that transactions mad
 
 The purpose of transaction fees on the Ethereum network is to enable security and decentralization. By requiring a fee for every computation executed on the network, malicous users are prevented from spamming the network. For example, denial of service (DDOS) attacks are virtual impossible to execute on the Ethereum because gas fees and gas limits make it financially infeasible to do so. 
 
-Cyber attacks that are diff
-
-Without transaction fees, vital consensus protcols like Proof of Work would not work. 
+Without transaction fees, vital consensus protcols like Proof of Work would not work because Ethereum miners would have no incentive to spend their money and computation power on validating the network.
 
 ![](https://edge.app/wp-content/uploads/2020/09/ethereum-gas-1.png)
 
