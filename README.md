@@ -11,7 +11,7 @@ When learning blockchain development, you may have noticed that transactions mad
 
 
 
-* How gas fees are calculated
+* How transaction fees are calculated
 * 
 
 
