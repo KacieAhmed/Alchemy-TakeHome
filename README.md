@@ -24,10 +24,6 @@ Before the London upgrade on August 5th, 2021, gas fees were calculated with the
 This formula is very simple. If your transaction cost 30,000 units of gas, and your gas price is 200 [Gwei](https://www.investopedia.com/terms/g/gwei-ethereum.asp#:~:text=Gwei%20is%20a%20denomination%20of,interference%20from%20a%20third%20party.), then by the Pre-London upgrade formula (gas fee = 30,000 gas * 200 gwei) you will pay 6000000 Gwei or 0.006 ETH. 
 
 
-* How transaction fees are calculated
-
-
-* 
 
 ### Step 1
 
