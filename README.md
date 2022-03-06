@@ -7,7 +7,7 @@ If you have questions at any point feel free to reach out in the [Alchemy Discor
 _______
 **Gas fees**
 
-When learning blockchain development, you may have noticed that transactions made on the Ethereum netowrk cost a fee. These fees are called *gas fees*, and they are a fundamental concept in web3 development. 
+When learning blockchain development, you may have noticed that transactions made on the Ethereum netowrk cost a fee. These fees are called *transaction fees*, and they are a fundamental concept in web3 development. 
 
 The purpose of transaction fees on the Ethereum network is to enable security and decentralization. Without transaction fees, vital consensus protcols like Proof of Work would not work. 
 
