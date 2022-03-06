@@ -17,7 +17,9 @@ Without transaction fees, vital consensus protcols like Proof of Work would also
 
 ## The London Upgrade (EIP-1559)
 
-Before the London upgrade on August 5th, 2021, gas fees were calculated with the formula **gas fees = gas spent * gas price**.
+Before the London upgrade on August 5th, 2021, gas fees were calculated with the formula **gas fees = gas spent * gas price**. 
+
+**Gas spent** is the total amount of gas required for a transaction, and **gas price** is the totoal amount of ether you are willing to pay per gas unit of execution.
 
 * How transaction fees are calculated
 
