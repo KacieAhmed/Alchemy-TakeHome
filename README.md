@@ -9,7 +9,7 @@ _______
 
 When learning blockchain development, you may have noticed that transactions made on the Ethereum network cost a fee. These fees are called *transaction fees*, and they are a fundamental concept in web3.
 
-The purpose of transaction fees on the Ethereum network is to enable security and decentralization. By requiring a fee for every computation executed on the network, malicous users are prevented from spamming the network. Cyber attacks that are difficult to defend against in web2 are infesible to execute on Ethereum. 
+The purpose of transaction fees on the Ethereum network is to enable security and decentralization. By requiring a fee for every computation executed on the network, malicous users are prevented from spamming the network. Thus, cyber attacks that are difficult to defend against in web2 aren't even fesible to execute on Ethereum. 
 
 For example, denial of service (DDOS) attacks are virtual impossible to execute on the Ethereum because gas fees and gas limits make it financially infeasible to do so. 
 
