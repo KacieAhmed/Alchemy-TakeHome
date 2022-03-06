@@ -13,7 +13,7 @@ The purpose of transaction fees on the Ethereum network is to enable security an
 
 Without transaction fees, vital consensus protcols like Proof of Work would also not work. 
 
-But how 
+But how are these fees calculated?
 
 
 
