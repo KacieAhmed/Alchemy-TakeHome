@@ -143,6 +143,9 @@ The reason we want to use an async function is that so we can use the keyword 'a
 **All of this code will be written in scripts.js:**
 
  ```
+ import { JsonRpcProvider } from '@ethersproject/providers'
+import { ethers } from 'ethers';
+const provider = new JsonRpcProvider('https://eth-ropsten.alchemyapi.io/v2/iyOKwQeJqxYftrbyCGJCZ1ias1go__jU');
 async function main() {
 
 }
@@ -153,6 +156,10 @@ main();
  
  
   ```
+  import { JsonRpcProvider } from '@ethersproject/providers'
+import { ethers } from 'ethers';
+const provider = new JsonRpcProvider('https://eth-ropsten.alchemyapi.io/v2/iyOKwQeJqxYftrbyCGJCZ1ias1go__jU');
+
 async function main() {
 
 //Gets the block numbers for the first and last block
@@ -176,4 +183,87 @@ async function main() {
 
 }
 main();
+  ```
+* Next we want to
+
+  ```
+import { JsonRpcProvider } from '@ethersproject/providers'
+import { ethers } from 'ethers';
+const provider = new JsonRpcProvider('https://eth-ropsten.alchemyapi.io/v2/iyOKwQeJqxYftrbyCGJCZ1ias1go__jU');
+
+
+
+async function main() {
+
+    //Gets the block numbers for the first and last block
+    const firstBlock = await provider.getBlockNumber();
+    let lastBlock = await firstBlock - 20;
+
+    //Arrays to store the blocks and txn
+    const listNumbers = [];
+    const listBlocks = [];
+    const listTxn = [];
+
+    //Array to store the TOTAL gas fees
+    const gasFees = [];
+
+    //Arrays to store the parts that make up the gas fee
+    const gasPrices = [];
+    const gasUsed = [];
+    const priorityFees = [];
+
+
+    //prints an array of each block's gas fees, priority fees, and gas spent
+    for (let i = 0; i < 20; i++) {
+
+
+        listNumbers[i] = lastBlock;
+        listBlocks[i] = await provider.getBlock(lastBlock);
+        listTxn[i] = await listBlocks[i].transactions[0];
+
+
+
+        //prints the gas prices if the transaction id's are defined
+        if (typeof listTxn[i] === 'undefined') {
+            console.log('ERROR: Txn number is undefined');
+        } else {
+
+            //get array of gas prices in eth
+            gasPrices[i] = await (await provider.getTransaction(listTxn[i])).gasPrice;
+            // gasPrices[i] = ethers.utils.formatEther(gasPrices[i]);
+
+            //get array of priority fees in wei
+            //sometimes returns undefined
+            priorityFees[i] = await (await provider.getTransaction(listTxn[i])).maxPriorityFeePerGas;
+
+            //get array of gas used
+            gasUsed[i] = await (await provider.getTransactionReceipt(listTxn[i])).gasUsed;
+
+
+            //find gas fee by multiplying total gas used by gas price
+            gasFees[i] = (gasPrices[i].mul(gasUsed[i]));
+
+            //Printing out the gas fee + breakdown
+            //Sometimes the priority fee is undefined, se we need an if statement
+
+            if (typeof priorityFees[i] != 'undefined') {
+                console.log('\n');
+                console.log('-------');
+                console.log('The base fee is of Block #' + listNumbers[i] + ' is ' + ethers.utils.formatEther(gasFees[i].sub(priorityFees[i])) + ' eth');
+                console.log('The priority fee is of Block #' + listNumbers[i] + ' is ' + ethers.utils.formatEther(priorityFees[i]) + ' eth');
+                console.log('The total gas fee is of Block #' + listNumbers[i] + ' is ' + ethers.utils.formatEther(gasFees[i]) + ' eth');
+                console.log('-------');
+                console.log('\n');
+            }
+
+        }
+        lastBlock++;
+
+    }
+
+}
+main();
+
+
+
   ```
