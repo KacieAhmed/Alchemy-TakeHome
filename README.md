@@ -117,3 +117,9 @@ import { ethers } from 'ethers';
   ```
 * These imports will allow you to use pre-existing [functions from ether.js.](https://docs.ethers.io/v5/api/providers/provider/) 
 * Without these imports, you would have to write the funcitons that reterive Ethereum blocks yourself. It is much eaiser to simply use pre-existing methods.
+
+## Step 8: Define your provider
+
+ ```
+const provider = new JsonRpcProvider('https://eth-ropsten.alchemyapi.io/v2/iyOKwQeJqxYftrbyCGJCZ1ias1go__jU');
+  ```
