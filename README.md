@@ -46,4 +46,15 @@ Now that you understand the basics, let's demonstrate how to get gas prices in t
  v14.15.0
   ```
 
-### Step 2
+## Step 2: Create a project folder
+
+* Pick a location on your computer where you want to store the project, and create a folder. 
+
+* You can use the terminal, or GUI in-order to do this.
+
+ ```
+ cd documents
+ mkdir GasProject
+  ```
+
+
