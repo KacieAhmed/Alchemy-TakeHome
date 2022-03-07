@@ -86,7 +86,7 @@ Now that you understand the basics, let's demonstrate how to get gas prices in t
 
 ![](https://raw.githubusercontent.com/KacieAhmed/Alchemy-TakeHome/main/images/Alchemy-2.png)
 
-## Step 5: Set type 'module' in your package.json
+## Step 6: Set type 'module' in your package.json
 * Go to package.json
 * Add the line '  "type": "module", ' under '  "main": "index.js" 
 
@@ -107,4 +107,13 @@ Now that you understand the basics, let's demonstrate how to get gas prices in t
   }
 }
   ```
+## Step 7: Import JsonRpcProvider and ethers into your JavaScript file
+* Go to scripts.js
+* Paste the following code into your project.
+* These imports will allow you to use pre-existing [functions from ether.js.](https://docs.ethers.io/v5/api/providers/provider/) 
+* Without these imports, you would have to write the funcitons that reterive Ethereum blocks yourself. It is much eaiser to simply use pre-existing methods.
 
+ ```
+ import { JsonRpcProvider } from '@ethersproject/providers'
+import { ethers } from 'ethers';
+  ```
