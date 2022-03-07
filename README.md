@@ -61,12 +61,15 @@ Now that you understand the basics, let's demonstrate how to get gas prices in t
 
  ```
  npm init
- npm install ethers
   ```
-  
-  ## Step 4: Create a Javascript file.
-
- ```
+ * After running this command, select the default options for everything (just keep pressing enter)
+ * You should see a file called 'package.json' after running this command.
+ 
+   ```
  npm init
  npm install ethers
   ```
+ * After running this command, you should see two new files. One called 'node_modules', and one called	'package-lock.json'
+  ## Step 4: Create a Javascript file.
+
+
