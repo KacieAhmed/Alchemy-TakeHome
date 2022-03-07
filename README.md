@@ -79,12 +79,12 @@ Now that you understand the basics, let's demonstrate how to get gas prices in t
 
 * First go to [Alchemy's website](https://www.alchemy.com/). 
 * Then login to your account and head over to App's
-https://raw.githubusercontent.com/KacieAhmed/Alchemy-TakeHome/main/images/Alchemy-1.png
+![](https://raw.githubusercontent.com/KacieAhmed/Alchemy-TakeHome/main/images/Alchemy-1.png)
 
 * Under apps, hit 'create app'. 
 * Fill out the information properly. Make sure you select 'Ethereum' as the chain and 'ropsten' as the network.
 
-https://raw.githubusercontent.com/KacieAhmed/Alchemy-TakeHome/main/images/Alchemy-2.png
+![](https://raw.githubusercontent.com/KacieAhmed/Alchemy-TakeHome/main/images/Alchemy-2.png)
 
 ## Step 5: Set type 'module' in your package.json
 * Go to package.json
