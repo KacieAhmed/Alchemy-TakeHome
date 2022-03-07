@@ -50,11 +50,23 @@ Now that you understand the basics, let's demonstrate how to get gas prices in t
 
 * Pick a location on your computer where you want to store the project, and create a folder. 
 
-* You can use the terminal, or GUI in-order to do this.
+* I would reccomend doing this in your terminal, because you will need to use the terminal to install the correct packages into your project.
 
  ```
  cd documents
  mkdir GasProject
   ```
 
+## Step 3: Install node & ethers into your project
 
+ ```
+ npm init
+ npm install ethers
+  ```
+  
+  ## Step 4: Create a Javascript file.
+
+ ```
+ npm init
+ npm install ethers
+  ```
