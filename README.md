@@ -120,6 +120,13 @@ import { ethers } from 'ethers';
 
 ## Step 8: Define your provider
 
+* Go to scripts.js
+* Paste the following code into your project.
+
  ```
-const provider = new JsonRpcProvider('https://eth-ropsten.alchemyapi.io/v2/iyOKwQeJqxYftrbyCGJCZ1ias1go__jU');
+const provider = new JsonRpcProvider('YOUR ALCHEMY KEY HERE');
   ```
+  
+  * Replace the 'YOUR ALCHEMY KEY HERE' with the key of the node you created. 
+
+![](https://raw.githubusercontent.com/KacieAhmed/Alchemy-TakeHome/main/images/Alc-Key.png)
