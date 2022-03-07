@@ -131,3 +131,5 @@ const provider = new JsonRpcProvider('YOUR ALCHEMY KEY HERE');
   * This provider acts an interface to Ethereum. It allows you to talk to ethereum.
 
 ![](https://raw.githubusercontent.com/KacieAhmed/Alchemy-TakeHome/main/images/Alc-Key.png)
+
+## Step 9: Build
