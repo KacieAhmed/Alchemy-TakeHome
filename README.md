@@ -29,6 +29,8 @@ The **base fee** is decided natively by the Ethereum network on a per block basi
 
 Now that you understand the basics, let's demonstrate how to get gas prices in the new EIP-1559 standard. Follow along and code with us!
 
+**We will be building an application that displays gas fees in the EIP-1559 standard** 🚀
+
 
 ## Step 1: Download Node.js
 
@@ -133,3 +135,5 @@ const provider = new JsonRpcProvider('YOUR ALCHEMY KEY HERE');
 ![](https://raw.githubusercontent.com/KacieAhmed/Alchemy-TakeHome/main/images/Alc-Key.png)
 
 ## Step 9: Build
+
+We want to build an application that 
