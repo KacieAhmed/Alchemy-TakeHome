@@ -70,6 +70,6 @@ Now that you understand the basics, let's demonstrate how to get gas prices in t
   ```
 
  * After running this command, you should see two new files. One called 'node_modules', and one called	'package-lock.json'
-  ## Step 4: Create a Javascript file.
+  ## Step 4: Open your IDE and create a JavaScript file.
 
 
