@@ -140,10 +140,39 @@ We want to build an application that displays gas fees in the EIP-1559 standard.
 
 The reason we want to use an async function is that so we can use the keyword 'await', which will allow us to retreive useable information from our block methods.
 
-**All of this code will be written in scripts.js**
+**All of this code will be written in scripts.js:**
 
  ```
 async function main() {
+
+}
+main();
+  ```
+  
+ Next we want to define our variables. We want to get the
+ 
+ 
+  ```
+async function main() {
+
+//Gets the block numbers for the first and last block
+    const firstBlock = await provider.getBlockNumber();
+    let lastBlock = await firstBlock - 20;
+
+    //Arrays to store the blocks and txn
+    const listNumbers = [];
+    const listBlocks = [];
+    const listTxn = [];
+
+    //Array to store the TOTAL gas fees
+    const gasFees = [];
+
+    //Arrays to store the parts that make up the gas fee
+    const gasPrices = [];
+    const gasUsed = [];
+    const priorityFees = [];
+
+
 
 }
 main();
