@@ -89,3 +89,5 @@ Now that you understand the basics, let's demonstrate how to get gas prices in t
 ## Step 5: Set type 'module' in your package.json
 * Go to package.json
 
+![](https://raw.githubusercontent.com/KacieAhmed/Alchemy-TakeHome/main/images/module.png)
+
