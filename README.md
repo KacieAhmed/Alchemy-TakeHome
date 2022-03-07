@@ -40,7 +40,7 @@ Now that you understand the basics, let's demonstrate how to get gas prices in t
  node -v
   ```
   
-  You should get back something like
+  You should get back something like:
 
  ```
  v14.15.0
