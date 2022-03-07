@@ -90,5 +90,21 @@ Now that you understand the basics, let's demonstrate how to get gas prices in t
 * Go to package.json
 * Add the line '  "type": "module", ' under '  "main": "index.js" 
 
-![](https://raw.githubusercontent.com/KacieAhmed/Alchemy-TakeHome/main/images/module.png)
+ ```
+ {
+  "name": "tutorial",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ethers": "^5.5.4"
+  }
+}
+  ```
 
