@@ -34,7 +34,7 @@ Now that you understand the basics, let's demonstrate how to get gas prices in t
 
 * The first step is to set up a node.js project. You can download node.js [here](https://nodejs.org/en/download/). 
 
-* Once you have downloaded node.js, make sure to check if it installed properly by running the following commands in your terminal
+* Once you have downloaded node.js, make sure to check if it installed properly by running the following command in your terminal:
 
  ```
  node -v
