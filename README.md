@@ -30,10 +30,13 @@ The **base fee** is decided natively by the Ethereum network on a per block basi
 Now that you understand the basics, let's demonstrate how to get gas prices in the new EIP-1559 standard. Follow along and code with us!
 
 
-## Step 1
-### Create a basic project
+## Step 1: Create a node JS project
 
+The first step is to set up a node.js project. 
 
+Make sure you have [node.js](https://nodejs.org/en/download/) installed. 
+
+Once you have downloaded node.js, make sure to check if it installed properly by running the following command in your terminal
 
 
 ### Step 2
