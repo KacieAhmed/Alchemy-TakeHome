@@ -265,5 +265,18 @@ node script.js
 
 ## Step 1: Create a new project.
 * Repeat steps 1-8 from the original project. You will be making a different folder
-  
+
+## Step 2: Import Axios.
+
+* Go to script.js and import axios
+
+  ```
+import axios from 'axios';
+  ```
+* We will be using it to send POST requests to users who want to know when gas prices are low.
+
+## Step 3: Build:
+
+
+
   
