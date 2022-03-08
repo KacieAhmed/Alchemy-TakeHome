@@ -138,13 +138,9 @@ const provider = new JsonRpcProvider('YOUR ALCHEMY KEY HERE');
 
 * Go to script.js
 
-We want to build an application that displays gas fees in the EIP-1559 standard. In-order to do that, we need to reterive blocks from ethereum. The best way to retreive information like that is to use our provider to get the information we need. In-order to do that, let's generate some key information using our provider. Since we want to build an application that displays gas fees in the EIP-1559 standard, let's store some important information. Ultimately, what we want is to have an array of Ethereum Blocks, and use that array of Ethereum Blocks to display the total gas fee + base fee + priority fee of each block. In-order to do that, we are going to need to create three arrays:
+We want to build an application that displays gas fees in the EIP-1559 standard. In-order to do that, we need to reterive blocks from ethereum. The best way to retreive information like that is to use our provider to get the information we need. In this step we will use our provider to give us the number of the first block and the last block (a.k.a the block 20 blocks before the first block). We will be finding the gas fee information for these 20 blocks in the next step.
 
-1. An array of block numbers. We will use these block numbers to reference the Ethereum blocks.
-2. An array of Ethereum blocks. We will use these Ethereum blocks to get a Txn from each block.
-3. An array of Txn's. We will use these Txn's to get the gas information from each block. 
 
-We will also create arrays to store the gas information. 
  
  
   ```
@@ -154,22 +150,9 @@ const provider = new JsonRpcProvider('https://eth-ropsten.alchemyapi.io/v2/iyOKw
 
 async function main() {
 
-//Gets the block numbers for the first and last block
+ //Gets the block numbers for the first and last block
     const firstBlock = await provider.getBlockNumber();
     let lastBlock = await firstBlock - 20;
-
-    //Arrays to store the blocks and txn
-    const listNumbers = [];
-    const listBlocks = [];
-    const listTxn = [];
-
-    //Array to store the TOTAL gas fees
-    const gasFees = [];
-
-    //Arrays to store the parts that make up the gas fee
-    const gasPrices = [];
-    const gasUsed = [];
-    const priorityFees = [];
 
 
 
