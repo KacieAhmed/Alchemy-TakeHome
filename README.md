@@ -271,7 +271,7 @@ node script.js
 * Go to script.js and import axios
 
  ```
-const txn = await listBlocks[i].transactions[0];
+import axios from 'axios';
   ```
 
 
