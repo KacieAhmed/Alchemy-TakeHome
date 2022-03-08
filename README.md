@@ -279,6 +279,8 @@ import axios from 'axios';
 
 ## Step 3: Build:
 
+* Go to script.js
+
 * The first thing we will be doing is setting up our gas limit and alert variables. When the gas of the incoming blocks is over 5000000000, we will set the alert variable to false. Later on we will make it so that if the gas goes under 5000000000, the alert variable will be set to true.
 
  ```
