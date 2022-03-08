@@ -136,23 +136,18 @@ const provider = new JsonRpcProvider('YOUR ALCHEMY KEY HERE');
 
 ## Step 9: Build
 
-We want to build an application that displays gas fees in the EIP-1559 standard. In-order to do that, we need to reterive blocks from ethereum. The best way to retreive information like that is to use our provider to get the information we need. 
+* Go to script.js
 
+* We want to build an application that displays gas fees in the EIP-1559 standard. In-order to do that, we need to reterive blocks from ethereum. The best way to retreive information like that is to use our provider to get the information we need. 
 
+* In-order to do that, let's generate some key information using our provider. Since we want to build an application that displays gas fees in the EIP-1559 standard, let's store some important information.
 
-**All of this code will be written in scripts.js:**
-
- ```
- import { JsonRpcProvider } from '@ethersproject/providers'
-import { ethers } from 'ethers';
-const provider = new JsonRpcProvider('https://eth-ropsten.alchemyapi.io/v2/iyOKwQeJqxYftrbyCGJCZ1ias1go__jU');
-async function main() {
-
-}
-main();
-  ```
-  
- Next we want to define our variables. We want to get the
+* Ultimately, what we want is to have an array of Ethereum Blocks, and use that array of Ethereum Blocks to display the total gas fee + base fee + priority fee of each block. 
+* In-order to do that, we are going to need to create three arrays. 
+1. An array of block numbers. We will use these block numbers to reference the Ethereum blocks.
+2. An array of Ethereum blocks. We will use these Ethereum blocks to get a Txn from each block.
+3. An array of Txn's. We will use these Txn's to get the gas information from each block. 
+4. We will also create arrays to store the gas information. 
  
  
   ```
