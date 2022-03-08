@@ -4,6 +4,8 @@
 
 If you have questions at any point feel free to reach out in the [Alchemy Discord](https://discord.com/invite/mMGsVgd)! 🚀
 
+*The code for the first part of this tutorial (displaying gas fees) is named "Tutorial". The code for the second part of this tutorial (webhook alert) is named "WebHook".*
+
 _______
 ### Gas fees
 
@@ -30,7 +32,7 @@ The **base fee** is decided natively by the Ethereum network on a per block basi
 Now that you understand the basics, let's demonstrate how to get gas prices in the new EIP-1559 standard. Follow along and code with us!
 
 #### We will be building an application that displays gas fees in the EIP-1559 standard 🚀
-#### The code for the first part of this tutorial (displaying gas fees) is named "Tutorial". The code for the second part of this tutorial (webhook alert) is named "WebHook".
+
 
 
 ## Step 1: Download Node.js
