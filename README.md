@@ -138,7 +138,7 @@ const provider = new JsonRpcProvider('YOUR ALCHEMY KEY HERE');
 
 * Go to script.js
 
-We want to build an application that displays gas fees in the EIP-1559 standard. In-order to do that, we need to reterive blocks from ethereum. The best way to retreive information like that is to use our provider to get the information we need. In this step we will use our provider to give us the number of the first block and the last block (a.k.a the block 20 blocks before the first block). We will be finding the gas fee information for these 20 blocks in the next step.
+We want to build an application that displays gas fees in the EIP-1559 standard. In-order to do that, we need to reterive blocks from ethereum. The best way to retreive information like that is to use our provider to get the information we need. In this step we will use our provider to give us the number of the first block and the last block ('last block' = the block 20 blocks before the first block). We will be finding the gas fee information for these 20 blocks in the next step.
 
 
  
@@ -160,6 +160,13 @@ async function main() {
 main();
 
   ```
+  
+  
+  In the next step, we will be using a for loop to print out the fee information. 
+  
+  Unfortunately, we can't access all of the fee information directly from the block. Se we have take a txn from each block in-order to get maxPriorityFeePerGas and gasUsed. 
+  
+  For some reason, sometimes the Txn comes back as 'undefined', so we will be writing a if statement in-order address this.
   
 
 ```
