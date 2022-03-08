@@ -279,7 +279,7 @@ import axios from 'axios';
 
 ## Step 3: Build:
 
-
+* The first thing we will be doing is setting up our gas limit and alert variables. When the gas of the incoming blocks is over 5000000000, we will set the variable to false. Later on we will make it so that if the gas goes under 5000000000, the gasUnder12A05F200 variable will be set to true.
 
  ```
 import { JsonRpcProvider } from '@ethersproject/providers'
@@ -291,8 +291,11 @@ const provider = new JsonRpcProvider('https://eth-ropsten.alchemyapi.io/v2/Xp7IP
 let gasUnder12A05F200 = false;
 const gasConstant = 5000000000;
   ```
+  * Similar to the previous excercise, we will use a loop. However instead of using a for loop, we will be using a while loop. This is because to want constantly check for gas prices and send an alert when it's below 5000000000, so we want our program to run forever
   
-  
+  * Just like the last excersise, we will be using the txn to get the information required.
+  * Just like the last excercise, we will be using an if statement on the txn outputs. This is because sometimes txn will come out undefined on certain blocks.
+  * The new thing
   
    ```
 import { JsonRpcProvider } from '@ethersproject/providers'
