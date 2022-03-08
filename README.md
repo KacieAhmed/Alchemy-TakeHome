@@ -188,7 +188,7 @@ async function main() {
     const firstBlock = await provider.getBlockNumber();
     let lastBlock = await firstBlock - 20;
 
-  //prints an array of each block's gas fees, priority fees, and gas spent
+  
     for (let i = 0; i < 20; i++) {
 
         const block = await provider.getBlock(lastBlock);
@@ -201,15 +201,14 @@ async function main() {
             console.log('ERROR: Txn number is undefined');
         } else {
 
-            //get array of gas prices in eth
+            
             const gasPrice = (await provider.getTransaction(txn)).gasPrice;
-            // gasPrices[i] = ethers.utils.formatEther(gasPrices[i]);
+            
 
-            //get array of priority fees in wei
-            //sometimes returns undefined
+        
             const priorityFees = (await provider.getTransaction(txn)).maxPriorityFeePerGas;
 
-            //get array of gas used
+            
             const gasUsed = (await provider.getTransactionReceipt(txn)).gasUsed;
 
 
@@ -217,7 +216,7 @@ async function main() {
             const gasFees = (gasPrice.mul(gasUsed));
 
             //Printing out the gas fee + breakdown
-            //Sometimes the priority fee is undefined, se we need an if statement
+          
 
             if (typeof priorityFees != 'undefined') {
                 console.log('\n');
