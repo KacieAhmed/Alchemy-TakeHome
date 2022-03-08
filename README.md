@@ -193,59 +193,43 @@ async function main() {
     const firstBlock = await provider.getBlockNumber();
     let lastBlock = await firstBlock - 20;
 
-    //Arrays to store the blocks and txn
-    const listNumbers = [];
-    const listBlocks = [];
-    const listTxn = [];
-
-    //Array to store the TOTAL gas fees
-    const gasFees = [];
-
-    //Arrays to store the parts that make up the gas fee
-    const gasPrices = [];
-    const gasUsed = [];
-    const priorityFees = [];
-
-
-    //prints an array of each block's gas fees, priority fees, and gas spent
+  //prints an array of each block's gas fees, priority fees, and gas spent
     for (let i = 0; i < 20; i++) {
 
-
-        listNumbers[i] = lastBlock;
-        listBlocks[i] = await provider.getBlock(lastBlock);
-        listTxn[i] = await listBlocks[i].transactions[0];
+        const block = await provider.getBlock(lastBlock);
+        const txn = await listBlocks[i].transactions[0];
 
 
 
         //prints the gas prices if the transaction id's are defined
-        if (typeof listTxn[i] === 'undefined') {
+        if (typeof txn === 'undefined') {
             console.log('ERROR: Txn number is undefined');
         } else {
 
             //get array of gas prices in eth
-            gasPrices[i] = await (await provider.getTransaction(listTxn[i])).gasPrice;
+            const gasPrice = (await provider.getTransaction(txn)).gasPrice;
             // gasPrices[i] = ethers.utils.formatEther(gasPrices[i]);
 
             //get array of priority fees in wei
             //sometimes returns undefined
-            priorityFees[i] = await (await provider.getTransaction(listTxn[i])).maxPriorityFeePerGas;
+            const priorityFees = (await provider.getTransaction(txn)).maxPriorityFeePerGas;
 
             //get array of gas used
-            gasUsed[i] = await (await provider.getTransactionReceipt(listTxn[i])).gasUsed;
+            const gasUsed = (await provider.getTransactionReceipt(txn)).gasUsed;
 
 
             //find gas fee by multiplying total gas used by gas price
-            gasFees[i] = (gasPrices[i].mul(gasUsed[i]));
+            const gasFees = (gasPrice.mul(gasUsed));
 
             //Printing out the gas fee + breakdown
             //Sometimes the priority fee is undefined, se we need an if statement
 
-            if (typeof priorityFees[i] != 'undefined') {
+            if (typeof priorityFees != 'undefined') {
                 console.log('\n');
                 console.log('-------');
-                console.log('The base fee is of Block #' + listNumbers[i] + ' is ' + ethers.utils.formatEther(gasFees[i].sub(priorityFees[i])) + ' eth');
-                console.log('The priority fee is of Block #' + listNumbers[i] + ' is ' + ethers.utils.formatEther(priorityFees[i]) + ' eth');
-                console.log('The total gas fee is of Block #' + listNumbers[i] + ' is ' + ethers.utils.formatEther(gasFees[i]) + ' eth');
+                console.log('The base fee is of Block #' + lastBlock + ' is ' + ethers.utils.formatEther(gasFees.sub(priorityFees)) + ' eth');
+                console.log('The priority fee is of Block #' + lastBlock + ' is ' + ethers.utils.formatEther(priorityFees) + ' eth');
+                console.log('The total gas fee is of Block #' + lastBlock + ' is ' + ethers.utils.formatEther(gasFees) + ' eth');
                 console.log('-------');
                 console.log('\n');
             }
