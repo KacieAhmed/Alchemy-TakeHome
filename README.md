@@ -237,8 +237,6 @@ async function main() {
 }
 main();
 
-
-
   ```
   
   
@@ -246,7 +244,7 @@ main();
   
   Test your code in the terminal using:
   
-    ```
+  ```
 node script.js
   ```
   You should get an output like this:
