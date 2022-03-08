@@ -253,10 +253,17 @@ node script.js
   
   
   ## Step 11: You are done! 🎉 🎉 🎉 🎉 🎉 🎉 🎉 🎉 🎉 🎉 🎉 🎉 🎉
-  
+  * Congrats on finishing the project!
+  * As you can see, as-per EIP-1559 standard, gas fees now include base fees and priority fees.
+  * You should now have a deeper understanding of how gas works on Ethereum
   -----------
   
   ## BONUS:
   
+  * Are you interested in bonus work? Using what we've learned, let's create an application that notifies us if the gas on Ethereum drops below a certain price!
+  * Now that you know how to access fee information via the provider, this project should take you significantly less time.
+
+## Step 1: Create a new project.
+* Repeat steps 1-8 from the original project. You will be making a different folder
   
   
