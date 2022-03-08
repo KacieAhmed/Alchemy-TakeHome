@@ -241,4 +241,24 @@ main();
 
   ```
   
-  ## Step 10: YOU'RE DONE! 🎉
+  
+  ## Step 10: Test your code!
+  
+  Test your code in the terminal using:
+  
+    ```
+node script.js
+  ```
+  You should get an output like this:
+  
+  ![](https://raw.githubusercontent.com/KacieAhmed/Alchemy-TakeHome/main/images/finalresult.png)
+  
+  
+  ## Step 11: You are done! 🎉 🎉 🎉 🎉 🎉 🎉 🎉 🎉 🎉 🎉 🎉 🎉 🎉
+  
+  -----------
+  
+  ## BONUS:
+  
+  
+  
