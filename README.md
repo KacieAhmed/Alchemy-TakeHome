@@ -258,7 +258,7 @@ node script.js
   * You should now have a deeper understanding of how gas works on Ethereum
   -----------
   
-  ## BONUS:
+  ## BONUS 💻:
   
   * Are you interested in bonus work? Using what we've learned, let's create an application that notifies us if the gas on Ethereum drops below a certain price!
   * Now that you know how to access fee information via the provider, this project should take you significantly less time.
@@ -279,7 +279,7 @@ import axios from 'axios';
 
 ## Step 3: Build:
 
-* The first thing we will be doing is setting up our gas limit and alert variables. When the gas of the incoming blocks is over 5000000000, we will set the variable to false. Later on we will make it so that if the gas goes under 5000000000, the gasUnder12A05F200 variable will be set to true.
+* The first thing we will be doing is setting up our gas limit and alert variables. When the gas of the incoming blocks is over 5000000000, we will set the alert variable to false. Later on we will make it so that if the gas goes under 5000000000, the alert variable will be set to true.
 
  ```
 import { JsonRpcProvider } from '@ethersproject/providers'
@@ -291,11 +291,11 @@ const provider = new JsonRpcProvider('https://eth-ropsten.alchemyapi.io/v2/Xp7IP
 let gasUnder12A05F200 = false;
 const gasConstant = 5000000000;
   ```
-  * Similar to the previous excercise, we will use a loop. However instead of using a for loop, we will be using a while loop. This is because to want constantly check for gas prices and send an alert when it's below 5000000000, so we want our program to run forever
+  * Next up we will be using a loop, similar to the previous excercise However instead of using a for loop, we will be using a while loop. This is because to want constantly check for gas prices and send an alert when it's below 5000000000, so we want our program to run forever
   
-  * Just like the last excersise, we will be using the txn to get the information required.
-  * Just like the last excercise, we will be using an if statement on the txn outputs. This is because sometimes txn will come out undefined on certain blocks.
-  * The new thing
+  * Just like the last excersise, we will be using the txn to get the information required. Just like the last excercise, we will be using an if statement on the txn outputs. This is because sometimes txn will come out undefined on certain blocks.
+  
+  * What's new is that we will be using an if statement to change the alert variable to **true** when the gas is below 5000000000. In that same if statement, we will be sending a POST requests to some endpoints. These post request with some data.
   
    ```
 import { JsonRpcProvider } from '@ethersproject/providers'
@@ -348,3 +348,7 @@ node script.js
   ```
   You should get an output like this:
   
+![](https://raw.githubusercontent.com/KacieAhmed/Alchemy-TakeHome/main/images/finalresult2.png)
+
+ ## Step 5: You are done! 🎉 🎉 🎉 🎉 🎉 🎉 🎉 🎉 🎉 🎉 🎉 🎉 🎉
+ * Now that you've finished this tutorial, you should have a deep understanding of how gas works in Ethereum!
