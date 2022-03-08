@@ -4,6 +4,8 @@
 
 If you have questions at any point feel free to reach out in the [Alchemy Discord](https://discord.com/invite/mMGsVgd)! 🚀
 
+❗ The code for the first part of this tutorial (displaying gas fees) is named **"Tutorial"** and the code for the second part of this tutorial (webhook alert) is named **"WebHook"**. ❗
+
 _______
 ### Gas fees
 
@@ -30,6 +32,7 @@ The **base fee** is decided natively by the Ethereum network on a per block basi
 Now that you understand the basics, let's demonstrate how to get gas prices in the new EIP-1559 standard. Follow along and code with us!
 
 #### We will be building an application that displays gas fees in the EIP-1559 standard 🚀
+
 
 
 ## Step 1: Download Node.js
@@ -61,17 +64,21 @@ Now that you understand the basics, let's demonstrate how to get gas prices in t
 
 ## Step 3: Install node & ethers into your project
 
+* First run:
+
  ```
  npm init
   ```
- * After running this command, select the default options for everything (just keep pressing enter)
+ * After running npm init, select the default options for everything (just keep pressing enter)
  * You should see a file called 'package.json' after running this command.
+
+* Next run:
 
  ```
  npm install ethers
   ```
 
- * After running this command, you should see two new files. One called 'node_modules', and one called	'package-lock.json'
+ * After installing ethers, you should see two new files. One called 'node_modules', and one called	'package-lock.json'
   ## Step 4: Open your IDE and create a JavaScript file.
 
 ![](https://raw.githubusercontent.com/KacieAhmed/Alchemy-TakeHome/main/images/tut-1.png)
@@ -90,7 +97,7 @@ Now that you understand the basics, let's demonstrate how to get gas prices in t
 
 ## Step 6: Set type 'module' in your package.json
 * Go to package.json
-* Add the line '  "type": "module", ' under '  "main": "index.js" 
+* Add the line '  **"type": "module",** ' under '  "main": "index.js" 
 
  ```
  {
@@ -118,7 +125,7 @@ Now that you understand the basics, let's demonstrate how to get gas prices in t
 import { ethers } from 'ethers';
   ```
 * These imports will allow you to use pre-existing [functions from ether.js.](https://docs.ethers.io/v5/api/providers/provider/) 
-* Without these imports, you would have to write the funcitons that reterive Ethereum blocks yourself. It is much eaiser to simply use pre-existing methods.
+* Without these imports, you will have to write the funcitons that reterive Ethereum blocks yourself. It is much eaiser to simply use pre-existing methods.
 
 ## Step 8: Define your provider
 
@@ -138,7 +145,7 @@ const provider = new JsonRpcProvider('YOUR ALCHEMY KEY HERE');
 
 * Go to script.js
 
-We want to build an application that displays gas fees in the EIP-1559 standard. In-order to do that, we need to reterive blocks from ethereum. The best way to retreive information like that is to use our provider to get the information we need. In this step we will use our provider to give us the number of the first block and the last block in our computation. We will be finding the gas fee information for these 20 blocks in the next step. So the "last block" is the block 20 blocks before the first block
+We want to build an application that displays gas fees in the EIP-1559 standard. In-order to do that, we need to reterive blocks from ethereum. The best way to retreive information like that is to use our provider to get the information we need. In this step we will use our provider to give us the block numbers in the computation. We will be finding the gas fee information for 20 blocks. So the "last block" is the block 20 blocks before the first block
 
 
  
@@ -169,7 +176,7 @@ const txn = await block[i].transactions[0];
   ```
  
  
- The txn allows us to access maxPriorityFeePerGas and gasUsed, which we need for the computation. Although, sometimes the TXN will come back as undefined. What this means is that sometimes **const txn = await block.transactions[0];** will return a invalid result. In-order to combat this, we will be checking to see if the txn assignment is defined before moving on in our loop. 
+ The txn allows us to access **maxPriorityFeePerGas** and **gasUsed**, which we need for the computation. Although, sometimes the TXN will come back as undefined. What this means is that sometimes **const txn = await block.transactions[0];** will return a invalid result. In-order to combat this, we will be checking to see if the txn assignment is defined before moving on in our loop. 
  
  Once we get all the information required, we will print it out.
   
@@ -260,7 +267,7 @@ node script.js
   ## BONUS 💻:
   
   * Are you interested in bonus work? Using what we've learned, let's create an application that notifies us if the gas on Ethereum drops below a certain price!
-  * Now that you know how to access fee information via the provider, this project should take you significantly less time.
+  * Now that you know how to access fee information via the provider, this project should be easier.
 
 ## Step 1: Create a new project.
 * Repeat steps 1-8 from the original project. You will be making a different folder
@@ -292,9 +299,9 @@ const provider = new JsonRpcProvider('https://eth-ropsten.alchemyapi.io/v2/Xp7IP
 let gasUnder12A05F200 = false;
 const gasConstant = 5000000000;
   ```
-  * Next up we will be using a loop, similar to the previous excercise However instead of using a for loop, we will be using a while loop. This is because to want constantly check for gas prices and send an alert when it's below 5000000000, so we want our program to run forever
+  * Next up we will be using a loop, similar to the previous excercise. However instead of using a for loop, we will be using a while loop. This is because to want constantly check for gas prices and send an alert when it's below 5000000000, so we want our program to run forever
   
-  * Just like the last excersise, we will be using the txn to get the information required. Just like the last excercise, we will be using an if statement on the txn outputs. This is because sometimes txn will come out undefined on certain blocks.
+  * Just like the last excersise, we will be using the txn to get the information required. Also like the last excercise, we will be using an if statement on the txn outputs. This is because sometimes txn will come out undefined on certain blocks.
   
   * What's new is that we will be using an if statement to change the alert variable to **true** when the gas is below 5000000000. In that same if statement, we will be sending a POST requests to some endpoints. These post request with some data.
   
