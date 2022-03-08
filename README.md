@@ -165,11 +165,11 @@ main();
  **In the next step, we will be using a for loop to print out the fee information.**  Unfortunately, we can't access all of the fee information directly from the block. So we are forced to take a TXN from each block. Hence the line:
  
   ```
-const txn = await listBlocks[i].transactions[0];
+const txn = await block[i].transactions[0];
   ```
  
  
- The txn allows us to access maxPriorityFeePerGas and gasUsed, which we need for the computation. Although, sometimes the TXN will come back as undefined. What this means is that sometimes **const txn = await listBlocks[i].transactions[0];** will return a invalid result. In-order to combat this, we will be checking to see if the txn assignment is defined before moving on in our loop. 
+ The txn allows us to access maxPriorityFeePerGas and gasUsed, which we need for the computation. Although, sometimes the TXN will come back as undefined. What this means is that sometimes **const txn = await block.transactions[0];** will return a invalid result. In-order to combat this, we will be checking to see if the txn assignment is defined before moving on in our loop. 
  
  Once we get all the information required, we will print it out.
   
@@ -192,7 +192,7 @@ async function main() {
     for (let i = 0; i < 20; i++) {
 
         const block = await provider.getBlock(lastBlock);
-        const txn = await listBlocks[i].transactions[0];
+        const txn = await block.transactions[0];
 
 
 
