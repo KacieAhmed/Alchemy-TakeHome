@@ -143,7 +143,8 @@ const provider = new JsonRpcProvider('YOUR ALCHEMY KEY HERE');
 1. An array of block numbers. We will use these block numbers to reference the Ethereum blocks.
 2. An array of Ethereum blocks. We will use these Ethereum blocks to get a Txn from each block.
 3. An array of Txn's. We will use these Txn's to get the gas information from each block. 
-4. We will also create arrays to store the gas information. 
+
+We will also create arrays to store the gas information. 
  
  
   ```
