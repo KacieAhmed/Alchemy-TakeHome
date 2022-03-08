@@ -4,7 +4,7 @@
 
 If you have questions at any point feel free to reach out in the [Alchemy Discord](https://discord.com/invite/mMGsVgd)! 🚀
 
-The code for the first part of this tutorial (displaying gas fees) is named **"Tutorial"**. The code for the second part of this tutorial (webhook alert) is named **"WebHook"**.
+❗ The code for the first part of this tutorial (displaying gas fees) is named **"Tutorial"**. The code for the second part of this tutorial (webhook alert) is named **"WebHook"**. ❗
 
 _______
 ### Gas fees
