@@ -138,7 +138,7 @@ const provider = new JsonRpcProvider('YOUR ALCHEMY KEY HERE');
 
 * Go to script.js
 
-We want to build an application that displays gas fees in the EIP-1559 standard. In-order to do that, we need to reterive blocks from ethereum. The best way to retreive information like that is to use our provider to get the information we need. In this step we will use our provider to give us the number of the first block and the last block ('last block' = the block 20 blocks before the first block). We will be finding the gas fee information for these 20 blocks in the next step.
+We want to build an application that displays gas fees in the EIP-1559 standard. In-order to do that, we need to reterive blocks from ethereum. The best way to retreive information like that is to use our provider to get the information we need. In this step we will use our provider to give us the number of the first block and the last block in our computation. We will be finding the gas fee information for these 20 blocks in the next step. So the "last block" is the block 20 blocks before the first block
 
 
  
@@ -162,11 +162,16 @@ main();
   ```
   
   
-  In the next step, we will be using a for loop to print out the fee information. 
-  
-  Unfortunately, we can't access all of the fee information directly from the block. Se we have take a txn from each block in-order to get maxPriorityFeePerGas and gasUsed. 
-  
-  For some reason, sometimes the Txn comes back as 'undefined', so we will be writing a if statement in-order address this.
+ **In the next step, we will be using a for loop to print out the fee information.**  Unfortunately, we can't access all of the fee information directly from the block. So we are forced to take a TXN from each block. Hence the line
+ 
+  ```
+const txn = await listBlocks[i].transactions[0];
+  ```
+ 
+ 
+ The txn allows us to access maxPriorityFeePerGas and gasUsed, which we need for the computation. Although, sometimes the TXN will come back as undefined. What this means is that sometimes **const txn = await listBlocks[i].transactions[0];** will return a invalid result. In-order to combat this, we will be checking to see if the txn assignment is defined before moving on in our loop. 
+ 
+ Once we get all the information required, we will print it out.
   
 
 ```
@@ -235,3 +240,5 @@ main();
 
 
   ```
+  
+  ## Step 10: YOU'RE DONE! 🎉
