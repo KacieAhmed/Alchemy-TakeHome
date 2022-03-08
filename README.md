@@ -162,7 +162,7 @@ main();
   ```
   
   
- **In the next step, we will be using a for loop to print out the fee information.**  Unfortunately, we can't access all of the fee information directly from the block. So we are forced to take a TXN from each block. Hence the line
+ **In the next step, we will be using a for loop to print out the fee information.**  Unfortunately, we can't access all of the fee information directly from the block. So we are forced to take a TXN from each block. Hence the line:
  
   ```
 const txn = await listBlocks[i].transactions[0];
