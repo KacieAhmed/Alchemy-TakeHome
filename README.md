@@ -136,9 +136,9 @@ const provider = new JsonRpcProvider('YOUR ALCHEMY KEY HERE');
 
 ## Step 9: Build
 
-We want to build an application that displays gas fees in the EIP-1559 standard. In-order to do that, we need to reterive blocks from ethereum. The best way to retreive information like that is to create an async function and use our provider to get the information we need. 
+We want to build an application that displays gas fees in the EIP-1559 standard. In-order to do that, we need to reterive blocks from ethereum. The best way to retreive information like that is to use our provider to get the information we need. 
 
-The reason we want to use an async function is that so we can use the keyword 'await', which will allow us to retreive useable information from our block methods.
+
 
 **All of this code will be written in scripts.js:**
 
